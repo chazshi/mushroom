@@ -1,10 +1,12 @@
 /*
  * @Author: chazshi 
  * @Date: 2017-12-28 04:05:46 
- * @Last Modified by:   chazshi 
- * @Last Modified time: 2017-12-28 04:05:46 
+ * @Last Modified by: chazshi
+ * @Last Modified time: 2018-02-15 00:29:13
  */
-// look at 6-10
+// look at 7-1
+// now throble in: network havn`t receive a response called 'info', but 'bossinfo'
+// on the 'bossinfo' page we can find a 'info' if we do the refresh opration
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -42,7 +44,7 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div>
-                {/* <AuthRoute></AuthRoute> */}
+                <AuthRoute></AuthRoute>
                 <Route path='/boss' component={Boss}></Route>
                 <Route path='/login' component={Login}></Route>
                 <Route path='/register' component={Register}></Route>

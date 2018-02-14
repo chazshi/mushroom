@@ -3,6 +3,7 @@ import Logo from '../../component/logo/logo'
 import { List, Radio, InputItem, WingBlank, WhiteSpace, Button } from 'antd-mobile'
 import {connect} from 'react-redux'
 import {register} from '../../redux/user.redux'
+import { Redirect} from 'react-router-dom'
 import './register.scss'
 
 @connect(
@@ -34,6 +35,7 @@ class Register extends Component {
         const RadioItem = Radio.RadioItem
         return (
             <div>
+                {this.props.redirectTo?<Redirect to={this.props.redirectTo}/>:null}
                 <Logo></Logo>
                 <WingBlank>
                     <h2>注册页</h2>
